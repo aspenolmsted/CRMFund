@@ -20,9 +20,9 @@ $manifest = [
     'icon' => '',
     'is_uninstallable' => true,
     'name' => 'SuiteCRM Fundraising Extension',
-    'published_date' => '2026-11-22 16:00:00',
+    'published_date' => '2026-11-23 16:00:00',
     'type' => 'module',
-    'version' => '1.0.3',
+    'version' => '1.0.11',
     'remove_tables' => 'prompt',
 ];
 
@@ -76,26 +76,6 @@ $installdefs = [
         [
             'from' => '<basepath>/custom/Extension/application/Ext/Language/en_us.fr_fundraising.php',
             'to_module' => 'application',
-            'language' => 'en_us',
-        ],
-        [
-            'from' => '<basepath>/custom/Extension/modules/Contacts/Ext/Language/en_us.fr_fundraising.php',
-            'to_module' => 'Contacts',
-            'language' => 'en_us',
-        ],
-        [
-            'from' => '<basepath>/custom/Extension/modules/Accounts/Ext/Language/en_us.fr_fundraising.php',
-            'to_module' => 'Accounts',
-            'language' => 'en_us',
-        ],
-        [
-            'from' => '<basepath>/custom/Extension/modules/Campaigns/Ext/Language/en_us.fr_fundraising.php',
-            'to_module' => 'Campaigns',
-            'language' => 'en_us',
-        ],
-        [
-            'from' => '<basepath>/custom/Extension/modules/Opportunities/Ext/Language/en_us.fr_fundraising.php',
-            'to_module' => 'Opportunities',
             'language' => 'en_us',
         ],
     ],
