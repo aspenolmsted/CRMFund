@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_CRMFUND_DONATE</name>
+    <author>Aspen Olmsted</author>
+    <creationDate>2026-11-27</creationDate>
+    <copyright>Copyright (C) 2026 Alliance.biz. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.2.0</version>
+    <description>Accepts online donations designated to a specific SuiteCRM CRMFund record.</description>
+    <namespace path="src">Alliance\Module\CrmfundDonate</namespace>
+
+    <files>
+        <folder module="mod_crmfund_donate">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="SuiteCRM CRMFund Settings">
+                <field
+                    name="suitecrm_url"
+                    type="url"
+                    label="SuiteCRM Base URL"
+                    description="e.g., https://suitecrm.alliance.biz"
+                    required="true"
+                />
+                <field
+                    name="suitecrm_user"
+                    type="text"
+                    label="SuiteCRM API Username"
+                    required="true"
+                />
+                <field
+                    name="suitecrm_password"
+                    type="password"
+                    label="SuiteCRM API Password"
+                    required="true"
+                />
+                <field
+                    name="fund_id"
+                    type="text"
+                    label="Target Fund ID"
+                    description="UUID of the specific Fund record in SuiteCRM."
+                    required="true"
+                />
+                <field
+                    name="fund_display_name"
+                    type="text"
+                    label="Fund Display Title"
+                    default="Annual Fund"
+                    description="Title displayed on the Joomla donation form."
+                    required="true"
+                />
+                <field
+                    name="fund_description"
+                    type="textarea"
+                    label="Fund Description"
+                    rows="3"
+                    description="Optional summary shown below the fund title."
+                />
+                <field
+                    name="preset_amounts"
+                    type="text"
+                    label="Preset Amounts (comma-separated)"
+                    default="25,50,100,250,500"
+                />
+                <field
+                    name="payment_redirect_url"
+                    type="url"
+                    label="Optional Payment Checkout URL"
+                    description="Optional external checkout link to redirect after recording the donation."
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
